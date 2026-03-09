@@ -1,0 +1,152 @@
+:root {
+    /* Mocha (Dark) */
+    --base: #1e1e2e;
+    --text: #cdd6f4;
+    --rosewater: #f5e0dc;
+    --flamingo: #f2cdcd;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --maroon: #eba0ac;
+    --peach: #fab387;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --teal: #94e2d5;
+    --sky: #89dceb;
+    --sapphire: #74c7ec;
+    --blue: #89b4fa;
+    --lavender: #b4befe;
+    --crust: #11111b;
+}
+
+.light-theme {
+    /* Latte (Light) */
+    --base: #eff1f5;
+    --text: #4c4f69;
+    --rosewater: #dc8a78;
+    --flamingo: #dd7878;
+    --pink: #ea76cb;
+    --mauve: #8839ef;
+    --red: #d20f39;
+    --maroon: #e64553;
+    --peach: #fe640b;
+    --yellow: #df8e1d;
+    --green: #40a02b;
+    --teal: #179287;
+    --sky: #04a5e5;
+    --sapphire: #209fb5;
+    --blue: #1e66f5;
+    --lavender: #7287fd;
+    --crust: #dce0e8;
+}
+
+body {
+    background-color: var(--base);
+    color: var(--text);
+    font-family: "Noto Sans CJK JP", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    font-size: 5.5rem;
+    margin-bottom: 2rem;
+}
+
+.controls {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    background-color: var(--crust);
+    color: var(--text);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+button:hover {
+    filter: brightness(1.2);
+    transform: scale(1.1);
+}
+
+.notification {
+    position: fixed;
+    bottom: 2rem;
+    background-color: var(--green);
+    color: var(--base);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(1rem);
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    gap: 0.5rem;
+
+    a,
+    span {
+        text-decoration: none;
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        &.osu {
+            color: var(--pink);
+        }
+
+        &.discord {
+            color: var(--lavender);
+        }
+
+        &.github {
+            color: var(--mauve);
+        }
+
+        &.myanimelist {
+            color: var(--blue);
+        }
+
+        &.vndb {
+            color: var(--teal);
+        }
+
+        &.bluesky {
+            color: var(--sky);
+        }
+    }
+}

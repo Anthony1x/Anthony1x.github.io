@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthonyだよ</title>
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            document.documentElement.classList.add('light-theme');
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <div class="controls">
+        <button id="theme-toggle" title="Toggle Theme">🌙</button>
+        <button id="lang-toggle" title="Toggle Language">🇯🇵</button>
+    </div>
+
+    <div id="copy-notification" class="notification">Copied!</div>
+
+    <h1 id="headline">
+        <span class="jp">こんにちは。アンソニーです。</span>
+        <span class="en" style="display: none;">Hi, I'm Anthony.</span>
+    </h1>
+
+    <div class="links">
+        <a class="osu" target="_blank" href="https://osu.ppy.sh/users/11711418">osu!</a>
+        <span class="discord" target="_blank" href="">Discord</span>
+        <a class="github" target="_blank" href="https://github.com/Anthony1x">GitHub</a>
+        <a class="myanimelist" target="_blank" href="https://myanimelist.net/profile/AnthonyFrown">MyAnimeList</a>
+        <a class="vndb" target="_blank" href="https://vndb.org/u253466">vndb</a>
+        <a class="bluesky" target="_blank" href="https://bsky.app/profile/anthonyfrown.bsky.social">Bluesky</a>
+    </div>
+</body>
+
+</html>
