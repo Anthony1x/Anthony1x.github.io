@@ -1,21 +1,22 @@
-var themeToggle = document.querySelector('#theme-toggle');
-var langToggle = document.querySelector('#lang-toggle');
-var discordBtn = document.querySelector('.discord');
-var notification = document.querySelector('#copy-notification');
-var root = document.documentElement;
-var headline = document.querySelector('#headline');
+"use strict";
+const themeToggle = document.querySelector('#theme-toggle');
+const langToggle = document.querySelector('#lang-toggle');
+const discordBtn = document.querySelector('.discord');
+const notification = document.querySelector('#copy-notification');
+const root = document.documentElement;
+const headline = document.querySelector('#headline');
 // Set theme toggle button icon based on current theme
 if (themeToggle && root.classList.contains('light-theme')) {
     themeToggle.textContent = '☀️';
 }
-themeToggle === null || themeToggle === void 0 ? void 0 : themeToggle.addEventListener('click', function () {
+themeToggle?.addEventListener('click', () => {
     root.classList.toggle('light-theme');
-    var isLight = root.classList.contains('light-theme');
+    const isLight = root.classList.contains('light-theme');
     themeToggle.textContent = isLight ? '☀️' : '🌙';
 });
-langToggle === null || langToggle === void 0 ? void 0 : langToggle.addEventListener('click', function () {
-    var jp = headline === null || headline === void 0 ? void 0 : headline.querySelector('.jp');
-    var en = headline === null || headline === void 0 ? void 0 : headline.querySelector('.en');
+langToggle?.addEventListener('click', () => {
+    const jp = headline?.querySelector('.jp');
+    const en = headline?.querySelector('.en');
     if (jp && en) {
         if (jp.style.display === 'none') {
             jp.style.display = 'inline';
@@ -31,13 +32,14 @@ langToggle === null || langToggle === void 0 ? void 0 : langToggle.addEventListe
         }
     }
 });
-discordBtn === null || discordBtn === void 0 ? void 0 : discordBtn.addEventListener('click', function (e) {
+discordBtn?.addEventListener('click', (e) => {
     e.preventDefault();
-    var username = "anthonyx";
-    navigator.clipboard.writeText(username).then(function () {
+    const username = "anthonyx";
+    navigator.clipboard.writeText(username).then(() => {
         notification.classList.add('show');
-        setTimeout(function () {
+        setTimeout(() => {
             notification.classList.remove('show');
         }, 2000);
     });
 });
+//# sourceMappingURL=index.js.map
