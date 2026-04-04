@@ -158,6 +158,10 @@ button:hover {
             color: var(--teal);
         }
 
+        &.bookmeter {
+            color: var(--green);
+        }
+
         &.bluesky {
             color: var(--sky);
         }
@@ -168,7 +172,7 @@ button:hover {
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
-        margin-top: 4rem; /* Space for fixed controls */
+        margin-top: 4rem;
     }
 
     .links {
