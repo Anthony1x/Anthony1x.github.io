@@ -30,7 +30,7 @@ langToggle?.addEventListener('click', () => {
             jp.style.display = 'none';
             en.style.display = 'inline';
             langToggle.textContent = '🇬🇧';
-            document.title = "I'm Anthony";
+            document.title = "It's Anthony";
         }
     }
 });
@@ -40,9 +40,9 @@ discordBtn?.addEventListener('click', (e) => {
     const username = "anthonyx";
 
     navigator.clipboard.writeText(username).then(() => {
-        notification.classList.add('show');
+        notification?.classList.add('show');
         setTimeout(() => {
-            notification.classList.remove('show');
+            notification?.classList.remove('show');
         }, 2000);
     });
 });
